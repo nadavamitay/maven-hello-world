@@ -17,4 +17,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn package --f maven-hello-world/my-app/pom.xml
+      run: mvn package --f /maven-hello-world/my-app/pom.xml
