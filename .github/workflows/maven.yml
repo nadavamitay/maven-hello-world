@@ -1,8 +1,9 @@
 name: Java CI
 
-on: 
+on:
   schedule:
-    - cron: '*/5 * * * *'
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
@@ -16,4 +17,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn package --file /my-app/pom.xml
