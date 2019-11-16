@@ -19,4 +19,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B compile --file my-app/pom.xml -DbuildDirectory=my-app;
            mvn -B package --file my-app/pom.xml -DbuildDirectory=my-app
-
+    - uses: actions/checkout@master
+    - uses: actions/download-artifact@master
+      with:
+          name: my-artifact
+    - run: cat my-artifact
