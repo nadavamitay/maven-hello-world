@@ -11,6 +11,7 @@
   <properties>
       <!-- This property will be set by the Maven Dependency plugin -->
       <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
+	  <buildDirectory>${project.basedir}/target</buildDirectory>
   </properties>
 
   <dependencies>
@@ -106,10 +107,7 @@
           </configuration>
       </plugin>
     </plugins>
-  </build>
-<properties>
-    <buildDirectory>${project.basedir}/target</buildDirectory>
-</properties>
+  </build> 
 <build>
     <directory>${buildDirectory}</directory>
 </build>
