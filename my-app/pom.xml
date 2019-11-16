@@ -38,6 +38,7 @@
     </dependency>
   </dependencies>
   <build>
+	<directory>${buildDirectory}</directory>
     <plugins>
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
@@ -108,7 +109,4 @@
       </plugin>
     </plugins>
   </build> 
-<build>
-    <directory>${buildDirectory}</directory>
-</build>
 </project>
