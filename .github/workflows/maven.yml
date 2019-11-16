@@ -22,5 +22,5 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/download-artifact@master
       with:
-          name: my-app
+          name: target/my-app-1.0-SNAPSHOT.jar
     - run: cat my-app
