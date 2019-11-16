@@ -17,5 +17,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B compile --file my-app/pom2.xml;
-           mvn -B package --file my-app/pom2.xml
+      run: mvn -B compile --file my-app/pom.xml;
+           mvn -B package --file my-app/pom.xml
