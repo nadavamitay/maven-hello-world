@@ -18,12 +18,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B compile --file my-app/pom.xml -DbuildDirectory=my-app;
-           mvn -B package --file my-app/pom.xml -DbuildDirectory=my-appsteps:
-- uses: actions/checkout@master
+           mvn -B package --file my-app/pom.xml -DbuildDirectory=my-app
 
-- uses: actions/download-artifact@master
-  with:
-    name: my-artifact
-    path: path/to/artifact
-    
-- run: cat path/to/artifact
