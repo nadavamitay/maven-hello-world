@@ -21,6 +21,6 @@ jobs:
            mvn -B package --file my-app/pom.xml
     - uses: actions/upload-artifact@master
       with:
-        name: App.class
+        name: Artifacts
         path: my-app
 
