@@ -22,5 +22,5 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: maven-hello-world/my-app/my-artifact
+        path: my-artifact
 
