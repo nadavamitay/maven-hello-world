@@ -11,7 +11,6 @@
   <properties>
       <!-- This property will be set by the Maven Dependency plugin -->
       <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
-	  <buildDirectory>${project.basedir}/target</buildDirectory>
   </properties>
 
   <dependencies>
@@ -38,7 +37,6 @@
     </dependency>
   </dependencies>
   <build>
-	<directory>${buildDirectory}</directory>
     <plugins>
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
