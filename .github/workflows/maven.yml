@@ -22,5 +22,5 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: App.class
-        path: target/classes/com/mycompany/app/App.class
+        path: my-app
 
