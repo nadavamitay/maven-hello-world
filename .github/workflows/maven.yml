@@ -1,10 +1,9 @@
 name: Java CI
 
 on:
-  [push]
-#   schedule:
+   schedule:
     # * is a special character in YAML so you have to quote this string
-  #  - cron:  '*/5 * * * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
@@ -18,13 +17,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B compile --file my-app/pom.xml -DbuildDirectory=my-app;
-           mvn -B package --file my-app/pom.xml -DbuildDirectory=my-app
-    - uses: actions/checkout@v1
-    - run: mkdir -p path/to/artifact
-    - run: echo hello > maven-hello-world/my-app/world.txt
+      run: mvn -B compile --file my-app/pom.xml;
+           mvn -B package --file my-app/pom.xml
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
-        path: maven-hello-world/my-app
+        path: maven-hello-world/my-app/my-artifact
 
