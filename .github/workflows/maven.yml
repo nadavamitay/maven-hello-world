@@ -2,14 +2,14 @@ name: Java CI
 
 on:
    push
-      
+   
+# Another Example: Run Workflow evrey 5 minutes      
 #   schedule:
-    # * is a special character in YAML so you have to quote this string
 #    - cron:  '*/5 * * * *'
 
 jobs:
   build:
-
+# Build Pipeline: Compile-> Package-> Upload Artifacts
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B compile --file my-app/pom.xml;
            mvn -B package --file my-app/pom.xml
+           
+ # Upload the genarated Artifacts
     - uses: actions/upload-artifact@master
       with:
         name: Artifacts
